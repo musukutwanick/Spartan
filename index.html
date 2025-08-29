@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spartan Traders</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS Animate On Scroll CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+</head>
+<body class="text-white">
+  <!-- Hero Section -->
+  <div class="relative min-h-screen" style="background-image: url('images/background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="bg-overlay"></div>
+    <!-- Hero Content Wrapper: force hero to fit viewport height minus navbar -->
+    <div class="flex flex-col min-h-[90vh] justify-center">
+  <!-- Navbar -->
+  <nav class="relative z-10 flex items-center justify-between px-6 py-4">
+    <div class="flex items-center space-x-3">
+      <img src="logo.png" alt="Spartan Logo" class="w-12 h-12 rounded-full border-2 border-yellow-400 bg-black object-cover">
+      <div class="flex flex-col leading-tight">
+        <span class="font-bold text-xl tracking-widest">SPARTAN <span class="text-yellow-400">TRADERS</span></span>
+      </div>
+    </div>
+    
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-8 text-white font-medium">
+      <li><a href="index.html" class="nav-link nav-active hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="challenges.html" class="nav-link hover:text-yellow-400 transition">Challenges</a></li>
+      <li><a href="how.html" class="nav-link hover:text-yellow-400 transition">How It Works</a></li>
+      <li><a href="testimonials.html" class="nav-link hover:text-yellow-400 transition">Testimonials</a></li>
+    </ul>
+    
+    <div class="flex items-center space-x-4">
+      <a href="contact.html" class="nav-link contact-btn hidden md:block px-6 py-2 bg-yellow-400 text-black font-semibold rounded-full shadow hover:bg-yellow-500 transition">Contact Us</a>
+      
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-black bg-opacity-95 transform translate-x-full transition-transform duration-300 ease-in-out z-20 md:hidden">
+    <div class="flex justify-end p-4">
+      <button id="close-menu-btn" class="text-white focus:outline-none">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
+    <ul class="flex flex-col space-y-6 px-6 pt-8 text-white font-medium">
+      <li><a href="index.html" class="nav-link hover:text-yellow-400 transition text-lg">Home</a></li>
+     
+      <li><a href="challenges.html" class="nav-link hover:text-yellow-400 transition text-lg">Challenges</a></li>
+      <li><a href="how.html" class="nav-link hover:text-yellow-400 transition text-lg">How It Works</a></li>
+      <li><a href="testimonials.html" class="nav-link hover:text-yellow-400 transition text-lg">Testimonials</a></li>
+      <li class="pt-4">
+        <button class="w-full px-6 py-3 bg-yellow-400 text-black font-semibold rounded-full shadow hover:bg-yellow-500 transition btn-hover ripple ripple-yellow">Contact Us</button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main class="relative z-10 flex flex-col items-center justify-center px-4 pt-4 md:pt-12 pb-8" data-aos="fade-up">
+    <div class="text-4xl md:text-7xl font-extrabold text-center text-white mb-2 mt-2 md:mt-4" data-aos="fade-down">Grow your Investments</div>
+    <h1 class="text-3xl md:text-6xl font-extrabold text-center leading-tight mb-4" data-aos="fade-up" data-aos-delay="100">
+      <span class="text-white">with</span> <span class="text-yellow-400">Spartan Traders</span>
+    </h1>
+    <p class="text-lg md:text-xl text-center mb-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+      Powered by the <span class="text-yellow-400 font-semibold">Black Panther Robot</span> for consistent results. Join Zimbabwe's premier forex trading community and watch your investments grow.
+    </p>
+    <!-- Stats Cards -->
+    <div class="w-full flex flex-col md:flex-row justify-center items-center gap-6 mb-8">
+      <div class="bg-black bg-opacity-60 border border-yellow-400 rounded-lg p-6 flex-1 min-w-[220px] flex flex-col items-center" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fas fa-chart-line text-yellow-400 text-3xl mb-2"></i>
+        <div class="text-2xl font-bold">95%</div>
+        <div class="text-sm text-gray-200">Success Rate</div>
+      </div>
+      <div class="bg-black bg-opacity-60 border border-yellow-400 rounded-lg p-6 flex-1 min-w-[220px] flex flex-col items-center" data-aos="zoom-in" data-aos-delay="400">
+        <i class="fas fa-shield-alt text-yellow-400 text-3xl mb-2"></i>
+        <div class="text-2xl font-bold">24/7</div>
+        <div class="text-sm text-gray-200">Automated Trading</div>
+      </div>
+      <div class="bg-black bg-opacity-60 border border-yellow-400 rounded-lg p-6 flex-1 min-w-[220px] flex flex-col items-center" data-aos="zoom-in" data-aos-delay="500">
+        <i class="fas fa-award text-yellow-400 text-3xl mb-2"></i>
+        <div class="text-2xl font-bold">Weekly</div>
+        <div class="text-sm text-gray-200">Profit Sharing</div>
+      </div>
+    </div>
+    <!-- CTA Button -->
+    <a href="challenges.html" class="inline-block px-8 py-4 bg-yellow-400 text-black font-bold rounded-full text-lg shadow hover:bg-yellow-500 transition mb-8 ripple ripple-yellow" data-aos="fade-up" data-aos-delay="600">Start Your Challenge <i class="fas fa-arrow-right ml-2"></i></a>
+    <!-- Bottom Icons Row -->
+    <div class="flex flex-col md:flex-row justify-center items-center gap-6 text-sm text-gray-200">
+      <div class="flex items-center gap-2" data-aos="fade-right" data-aos-delay="700"><i class="fas fa-shield-alt text-yellow-400"></i> Secure & Regulated</div>
+      <div class="flex items-center gap-2" data-aos="fade-right" data-aos-delay="800"><i class="fas fa-check-circle text-yellow-400"></i> Proven Track Record</div>
+      <div class="flex items-center gap-2" data-aos="fade-right" data-aos-delay="900"><i class="fas fa-headset text-yellow-400"></i> Expert Support</div>
+    </div>
+  </div>
+  <!-- End Hero Section -->
+    </div>
+  <!-- About Section -->
+  <section class="bg-white py-20 px-4" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <!-- About Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-black mb-6">
+          About <span class="text-yellow-400">Spartan Traders</span>
+        </h2>
+        <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+          Zimbabwe's leading forex trading company, revolutionizing investment opportunities through cutting-edge automated trading technology and unwavering commitment to our community.
+        </p>
+      </div>
+
+      <!-- Black Panther Robot Section -->
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+        <div data-aos="fade-right">
+          <h3 class="text-3xl md:text-4xl font-bold text-black mb-6">
+            Meet the <span class="text-yellow-400">Black Panther Robot</span>
+          </h3>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            Our proprietary Black Panther Robot is an advanced algorithmic trading system designed to navigate the forex markets with precision and consistency. Built with years of market analysis and refined through countless trading scenarios, it operates 24/7 to maximize your investment potential.
+          </p>
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            At Spartan Traders, we believe in transparency, trust, and community. Our mission is to democratize forex trading by providing retail investors access to institutional-grade trading technology with complete transparency in our profit-sharing model.
+          </p>
+
+          <!-- Features Grid -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="flex items-start space-x-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="bg-yellow-400 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fas fa-brain text-black text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-black mb-1">Advanced AI Technology</h4>
+                <p class="text-gray-600 text-sm">Cutting-edge algorithms that adapt to market conditions</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3" data-aos="fade-up" data-aos-delay="200">
+              <div class="bg-yellow-400 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fas fa-shield-alt text-black text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-black mb-1">Risk Management</h4>
+                <p class="text-gray-600 text-sm">Built-in safeguards to protect your investment</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3" data-aos="fade-up" data-aos-delay="300">
+              <div class="bg-yellow-400 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fas fa-chart-line text-black text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-black mb-1">Consistent Performance</h4>
+                <p class="text-gray-600 text-sm">Proven track record of steady returns</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3" data-aos="fade-up" data-aos-delay="400">
+              <div class="bg-yellow-400 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fas fa-users text-black text-sm"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-black mb-1">Community Focused</h4>
+                <p class="text-gray-600 text-sm">Building wealth together in Zimbabwe</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side with image and stats -->
+        <div class="relative" data-aos="fade-left">
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <img src="images/trading.jpg" alt="Trading Setup" class="w-full h-80 object-cover">
+            
+            <!-- Stats overlay -->
+            <div class="absolute bottom-4 left-4 right-4 bg-white bg-opacity-95 rounded-lg p-4" data-aos="zoom-in" data-aos-delay="200">
+              <div class="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <div class="text-2xl font-bold text-black">100+</div>
+                  <div class="text-xs text-gray-600">Active Traders</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold text-yellow-400">95%</div>
+                  <div class="text-xs text-gray-600">Win Rate</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold text-black">3</div>
+                  <div class="text-xs text-gray-600">Years Active</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Spartan Traders Section -->
+  <section class="bg-gray-50 py-20 px-4" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-black mb-6">
+          Why Choose <span class="text-yellow-400">Spartan Traders</span>
+        </h2>
+        <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+          We combine cutting-edge technology, transparent operations, and dedicated support to provide Zimbabwe's most trusted forex trading experience.
+        </p>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <!-- Automated Black Panther Robot Trading -->
+        <div class="bg-white p-8 rounded-lg shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-yellow-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6 float-animation">
+            <i class="fas fa-robot text-black text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-black mb-4">Automated Black Panther Robot Trading</h3>
+          <p class="text-gray-700 mb-6">Our proprietary AI system trades 24/7 with precision and consistency, removing human emotion from trading decisions.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Advanced AI algorithms
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Real-time market analysis
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              24/7 automated trading
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Emotion-free decisions
+            </li>
+          </ul>
+        </div>
+
+        <!-- Weekly Payouts -->
+        <div class="bg-white p-8 rounded-lg shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-yellow-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6 float-animation float-delay-1">
+            <i class="fas fa-clock text-black text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-black mb-4">Weekly Payouts</h3>
+          <p class="text-gray-700 mb-6">Receive your profit share every week directly to your preferred payment method. No waiting months for returns.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Weekly distributions
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Multiple payment options
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Fast processing
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Reliable schedule
+            </li>
+          </ul>
+        </div>
+
+        <!-- Different Challenge Levels -->
+        <div class="bg-white p-8 rounded-lg shadow-sm card-hover" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-yellow-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6 float-animation float-delay-2">
+            <i class="fas fa-chart-line text-black text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-black mb-4">Different Challenge Levels</h3>
+          <p class="text-gray-700 mb-6">Choose from three investment tiers designed to match your risk appetite and investment goals.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              $200 starter challenges
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              $500 advanced tier
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Flexible investment levels
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Scalable returns
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Secure and Transparent System -->
+        <div class="bg-white p-8 rounded-lg shadow-sm card-hover" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-yellow-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6 float-animation">
+            <i class="fas fa-shield-alt text-black text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-black mb-4">Secure and Transparent System</h3>
+          <p class="text-gray-700 mb-6">Full transparency in our trading operations with secure handling of your investments and regular performance reports.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Transparent reporting
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Secure fund handling
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Regular updates
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Clear profit sharing
+            </li>
+          </ul>
+        </div>
+
+        <!-- Dedicated Support Team -->
+        <div class="bg-white p-8 rounded-lg shadow-sm card-hover" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-yellow-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6 float-animation float-delay-1">
+            <i class="fas fa-users text-black text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-black mb-4">Dedicated Support Team</h3>
+          <p class="text-gray-700 mb-6">Our experienced team provides comprehensive support through WhatsApp, Telegram, and direct communication channels.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              WhatsApp support
+            </li>
+           
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Expert guidance
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              Community access
+            </li>
+          </ul>
+        </div>
+
+        <!-- Proven Track Record -->
+        <div class="bg-white p-8 rounded-lg shadow-sm card-hover" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-yellow-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6 float-animation float-delay-2">
+            <i class="fas fa-award text-black text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-black mb-4">Proven Track Record</h3>
+          <p class="text-gray-700 mb-6">Three years of consistent performance with hundreds of successful traders and millions in profits generated.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              2+ years experience
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              100+ active traders
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              95% success rate
+            </li>
+            <li class="flex items-center text-sm text-gray-600">
+              <i class="fas fa-check-circle text-yellow-400 mr-2"></i>
+              $100K+ profits generated
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- The Spartan Advantage Comparison -->
+      <div class="bg-gray-900 rounded-3xl p-8 md:p-12 mx-4 md:mx-8 mt-16">
+        <div class="text-center mb-12">
+          <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">
+            The <span class="text-yellow-400">Spartan Advantage</span>
+          </h3>
+          <p class="text-gray-300 text-lg">
+            See what sets us apart from traditional trading platforms and investment options.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <!-- Traditional Trading -->
+          <div>
+            <h4 class="text-xl font-bold text-red-400 mb-6">Traditional Trading</h4>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Requires extensive market knowledge</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Time-intensive analysis needed</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Emotional decision making</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Inconsistent results</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">High learning curve</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Risk of major losses</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Limited support available</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Unpredictable income</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Spartan Traders -->
+          <div>
+            <h4 class="text-xl font-bold text-yellow-400 mb-6">Spartan Traders</h4>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">No trading experience required</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Start with as little as $200</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Transparent profit-sharing model</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Risk-managed trading strategies</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Weekly performance reports</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Local Zimbabwe-based support</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Multiple payment methods accepted</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                <span class="text-gray-300">Active trading community</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Performance Section -->
+  <section class="bg-yellow-50 py-20 px-4" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-black mb-6">
+          Our <span class="text-yellow-400">Performance</span>
+        </h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+          Transparency is key to our success. Here are the real numbers from our trading performance.
+        </p>
+      </div>
+
+      <!-- Performance Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+        <div class="text-center">
+          <div class="text-4xl md:text-6xl font-bold text-black mb-2">95%</div>
+          <div class="text-gray-700 font-medium">Success Rate</div>
+          <div class="text-yellow-600 text-sm mt-1">Last 12 months</div>
+        </div>
+        
+        <div class="text-center">
+          <div class="text-4xl md:text-6xl font-bold text-black mb-2">$100K+</div>
+          <div class="text-gray-700 font-medium">Total Profits</div>
+          <div class="text-yellow-600 text-sm mt-1">Generated for clients</div>
+        </div>
+        
+        <div class="text-center">
+          <div class="text-4xl md:text-6xl font-bold text-black mb-2">100+</div>
+          <div class="text-gray-700 font-medium">Active Traders</div>
+          <div class="text-yellow-600 text-sm mt-1">Growing community</div>
+        </div>
+        
+        <div class="text-center">
+          <div class="text-4xl md:text-6xl font-bold text-black mb-2">0</div>
+          <div class="text-gray-700 font-medium">Losing Months</div>
+          <div class="text-yellow-600 text-sm mt-1">In 2023-2025</div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center">
+        <h3 class="text-2xl md:text-3xl font-bold text-black mb-4">
+          Ready to Experience the Spartan Difference?
+        </h3>
+        <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+          Join hundreds of successful traders who have chosen Spartan Traders for consistent, transparent, and profitable forex trading.
+        </p>
+        <a href="#" class="inline-flex items-center px-8 py-4 bg-yellow-400 text-black font-bold rounded-full text-lg shadow-lg hover:bg-yellow-500 transition">
+          <i class="fas fa-bolt mr-2"></i>
+          Start Your Trading Journey
+        </a>
+
+        <script>
+        // WhatsApp CTA button
+        document.addEventListener('DOMContentLoaded', function() {
+          var whatsappBtn = document.querySelector('a.inline-flex.bg-yellow-400');
+          if (whatsappBtn) {
+            whatsappBtn.setAttribute('href', 'https://wa.me/263789356129?text=' + encodeURIComponent('Hey spartan i want to invest with you'));
+            whatsappBtn.setAttribute('target', '_blank');
+            whatsappBtn.setAttribute('rel', 'noopener noreferrer');
+          }
+        });
+        </script>
+      </div>
+    
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-200 pt-16 pb-8 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 mb-8">
+      <!-- Brand and Description -->
+      <div>
+        <div class="flex items-center space-x-3 mb-4">
+          <img src="logo.png" alt="Spartan Logo" class="w-12 h-12 rounded-full border-2 border-yellow-400 bg-black object-cover">
+          <div class="flex flex-col leading-tight">
+            <span class="font-bold text-xl tracking-widest text-white">SPARTAN <span class="text-yellow-400">TRADERS</span></span>
+          </div>
+        </div>
+        <p class="mb-4">Zimbabwe's leading forex trading company, empowering retail investors through our proprietary Black Panther Robot and transparent profit-sharing model.</p>
+        <div class="flex items-center mb-2">
+          <i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i>
+          <span>Harare, Zimbabwe</span>
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-chart-line text-yellow-400 mr-2"></i>
+          <span class="text-yellow-400 font-semibold">3+ Years of Consistent Performance</span>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-bold text-white mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
+          <li><a href="challenges.html" class="hover:text-yellow-400 transition">Trading Challenges</a></li>
+          <li><a href="how.html" class="hover:text-yellow-400 transition">How It Works</a></li>
+          <li><a href="testimonials.html" class="hover:text-yellow-400 transition">Testimonials</a></li>
+        </ul>
+      </div>
+      <!-- Connect With Us -->
+      <div>
+        <h4 class="font-bold text-white mb-4">Connect With Us</h4>
+        <ul class="space-y-2 mb-4">
+          <li class="flex items-center"><i class="fas fa-comments text-yellow-400 mr-2"></i> WhatsApp Support</li>
+          <li class="flex items-center"><i class="fas fa-envelope text-yellow-400 mr-2"></i> Email Us</li>
+          <li class="flex items-center">
+            <a href="https://www.tiktok.com/@sparter_tha_trader?_t=ZM-8zDttvWUMZ4&_r=1" target="_blank" rel="noopener noreferrer" class="flex items-center hover:text-yellow-400 transition">
+              <i class="fab fa-tiktok text-yellow-400 text-lg mr-2"></i> Follow us on TikTok
+            </a>
+          </li>
+        </ul>
+        <div>
+          <span class="text-yellow-400 font-bold">Trading Hours</span>
+          <div class="text-gray-300 text-sm">
+            Robot: 24/7 Automated<br>
+            Support: Mon-Fri 8AM-6PM<br>
+            Payouts: Every Saturday
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="border-gray-700 my-6">
+    <div class="text-center text-gray-400 text-sm">
+      © 2025 Spartan Traders. All rights reserved.<br>
+      <span class="text-white">designed by</span> <span class="text-yellow-400 font-semibold">nick</span><br>
+      <span class="text-white">+263786438897</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- AOS Animate On Scroll JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 900,
+      offset: 80
+    });
+  </script>
+</body>
+</html>
+

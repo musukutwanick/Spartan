@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- AOS Animate On Scroll CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Spartan Traders</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Navbar -->
+  <nav class="relative z-10 flex items-center justify-between px-6 py-4 bg-black">
+    <div class="flex items-center space-x-3">
+      <img src="logo.png" alt="Spartan Logo" class="w-12 h-12 rounded-full border-2 border-yellow-400 bg-black object-cover">
+      <div class="flex flex-col leading-tight">
+        <span class="font-bold text-xl tracking-widest text-white">SPARTAN <span class="text-yellow-400">TRADERS</span></span>
+      </div>
+    </div>
+    <ul class="hidden md:flex space-x-8 text-white font-medium">
+      <li><a href="index.html" class="nav-link hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="challenges.html" class="nav-link hover:text-yellow-400 transition">Challenges</a></li>
+      <li><a href="how.html" class="nav-link hover:text-yellow-400 transition">How It Works</a></li>
+      <li><a href="testimonials.html" class="nav-link hover:text-yellow-400 transition">Testimonials</a></li>
+    </ul>
+    <div class="flex items-center space-x-4">
+      <button class="nav-link nav-active contact-btn hidden md:block px-6 py-2 bg-yellow-400 text-black font-semibold rounded-full shadow hover:bg-yellow-500 transition">Contact Us</button>
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </nav>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-black bg-opacity-95 transform translate-x-full transition-transform duration-300 ease-in-out z-20 md:hidden">
+    <div class="flex justify-end p-4">
+      <button id="close-menu-btn" class="text-white focus:outline-none">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
+    <ul class="flex flex-col space-y-6 px-6 pt-8 text-white font-medium">
+      <li><a href="index.html" class="nav-link hover:text-yellow-400 transition text-lg">Home</a></li>
+      <li><a href="challenges.html" class="nav-link hover:text-yellow-400 transition text-lg">Challenges</a></li>
+      <li><a href="how.html" class="nav-link hover:text-yellow-400 transition text-lg">How It Works</a></li>
+      <li><a href="testimonials.html" class="nav-link hover:text-yellow-400 transition text-lg">Testimonials</a></li>
+      <li class="pt-4">
+        <a href="contact.html" class="nav-link contact-btn hidden md:block px-6 py-2 bg-yellow-400 text-black font-semibold rounded-full shadow hover:bg-yellow-500 transition">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Contact Section -->
+  <section class="py-20 px-4 bg-gray-50 min-h-screen">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-4 text-gray-900" data-aos="fade-down">
+        Join the <span class="text-yellow-400">Spartan Community</span>
+      </h1>
+      <p class="text-center text-gray-700 mb-12 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+        Ready to start your forex trading journey? Get in touch with us today and let the Black Panther Robot start growing your investment.
+      </p>
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Start Your Challenge Form -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 card-hover" data-aos="fade-right" data-aos-delay="300">
+          <h2 class="text-xl font-bold mb-4 text-gray-900">Start Your Challenge</h2>
+          <p class="text-sm text-gray-600 mb-6">Fill out the form below and we'll get back to you within 24 hours to discuss your investment goals and get you started.</p>
+          <form class="space-y-4">
+            <div class="flex flex-col md:flex-row gap-4">
+              <div class="flex-1">
+                <label class="block text-sm font-medium mb-1">Full Name<span class="text-red-500">*</span></label>
+                <input id="wa-name" type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="Your full name" required>
+              </div>
+              <div class="flex-1">
+                <label class="block text-sm font-medium mb-1">Email Address<span class="text-red-500">*</span></label>
+                <input id="wa-email" type="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="your.email@example.com" required>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-4">
+              <div class="flex-1">
+                <label class="block text-sm font-medium mb-1">Phone Number<span class="text-red-500">*</span></label>
+                <input id="wa-phone" type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" placeholder="+263 xxx xxx xxx" required>
+              </div>
+              <div class="flex-1">
+                <label class="block text-sm font-medium mb-1">Interested Challenge</label>
+                <select id="wa-challenge" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                  <option>Select a challenge</option>
+                  <option>$200 → $1000 Challenge</option>
+                  <option>$200 → $2000 Challenge</option>
+                  <option>$500 → $5000 Challenge</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1">Message</label>
+              <textarea id="wa-message" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-400" rows="3" placeholder="Tell us about your investment goals or any questions you have..."></textarea>
+            </div>
+            <button id="wa-send-btn" type="button" class="w-full bg-yellow-400 text-black font-bold rounded-full py-3 mt-2 shadow hover:bg-yellow-500 transition flex items-center justify-center btn-hover ripple ripple-yellow"><i class="fab fa-whatsapp mr-2"></i>Send Message via WhatsApp</button>
+          </form>
+        </div>
+        <!-- Get In Touch Card -->
+        <div class="bg-black rounded-2xl shadow-lg p-8 text-white flex flex-col justify-between card-hover" data-aos="fade-left" data-aos-delay="400">
+          <h2 class="text-xl font-bold mb-6 text-yellow-400">Get In Touch</h2>
+          <div class="space-y-6">
+            <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="500">
+              <span class="bg-yellow-900 bg-opacity-30 rounded-full p-3 flex items-center justify-center float-animation"><i class="fas fa-comments text-yellow-400 text-xl"></i></span>
+              <div>
+                <div class="font-semibold">WhatsApp Support</div>
+                <div class="text-sm text-gray-300">Get instant support and join our trading community</div>
+                <div class="text-yellow-400 font-bold mt-1">+263 789 356 129</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="600">
+              <span class="bg-yellow-900 bg-opacity-30 rounded-full p-3 flex items-center justify-center float-animation float-delay-1"><i class="fas fa-envelope text-yellow-400 text-xl"></i></span>
+              <div>
+                <div class="font-semibold">Email Us</div>
+                <div class="text-sm text-gray-300">For detailed inquiries and support</div>
+                <div class="text-yellow-400 font-bold mt-1">info@spartantraders.zw</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="700">
+              <span class="bg-yellow-900 bg-opacity-30 rounded-full p-3 flex items-center justify-center float-animation float-delay-2"><i class="fas fa-map-marker-alt text-yellow-400 text-xl"></i></span>
+              <div>
+                <div class="font-semibold">Location</div>
+                <div class="text-sm text-gray-300">Harare, Zimbabwe<br>Serving traders nationwide</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="bg-yellow-900 bg-opacity-30 rounded-full p-3 flex items-center justify-center"><i class="fas fa-clock text-yellow-400 text-xl"></i></span>
+              <div>
+                <div class="font-semibold">Support Hours</div>
+                <div class="text-sm text-gray-300">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Sunday: Emergency support only</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-200 pt-16 pb-8 px-4 mt-16">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 mb-8">
+      <!-- Brand and Description -->
+      <div>
+        <div class="flex flex-col leading-tight">
+          <span class="font-bold text-xl tracking-widest text-white">SPARTAN <span class="text-yellow-400">TRADERS</span></span>
+        </div>
+        <p class="mb-4">Zimbabwe's leading forex trading company, empowering retail investors through our proprietary Black Panther Robot and transparent profit-sharing model.</p>
+        <div class="flex items-center mb-2">
+          <i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i>
+          <span>Harare, Zimbabwe</span>
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-chart-line text-yellow-400 mr-2"></i>
+          <span class="text-yellow-400 font-semibold">3+ Years of Consistent Performance</span>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-bold text-white mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
+          <li><a href="#about" class="hover:text-yellow-400 transition">About Us</a></li>
+          <li><a href="challenges.html" class="hover:text-yellow-400 transition">Trading Challenges</a></li>
+          <li><a href="how.html" class="hover:text-yellow-400 transition">How It Works</a></li>
+          <li><a href="testimonials.html" class="hover:text-yellow-400 transition">Testimonials</a></li>
+        </ul>
+      </div>
+      <!-- Connect With Us -->
+       <div>
+        <h4 class="font-bold text-white mb-4">Connect With Us</h4>
+        <ul class="space-y-2 mb-4">
+          <li class="flex items-center"><i class="fas fa-comments text-yellow-400 mr-2"></i> WhatsApp Support</li>
+          <li class="flex items-center"><i class="fas fa-envelope text-yellow-400 mr-2"></i> Email Us</li>
+          <li class="flex items-center">
+            <a href="https://www.tiktok.com/@sparter_tha_trader?_t=ZM-8zDttvWUMZ4&_r=1" target="_blank" rel="noopener noreferrer" class="flex items-center hover:text-yellow-400 transition">
+              <i class="fab fa-tiktok text-yellow-400 text-lg mr-2"></i> Follow us on TikTok
+            </a>
+          </li>
+        </ul>
+        <div>
+          <span class="text-yellow-400 font-bold">Trading Hours</span>
+          <div class="text-gray-300 text-sm">
+            Robot: 24/7 Automated<br>
+            Support: Mon-Fri 24hrs<br>
+            Payouts: Every Saturday
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="border-gray-700 my-6">
+    <div class="text-center text-gray-400 text-sm">
+      © 2025 Spartan Traders. All rights reserved.<br>
+      <span class="text-white">designed by</span> <span class="text-yellow-400 font-semibold">nick</span><br>
+      <span class="text-white">+263786438897</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+    <!-- AOS Animate On Scroll JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 900, offset: 80 });
+    </script>
+  <script>
+    document.getElementById('wa-send-btn').addEventListener('click', function() {
+      var name = document.getElementById('wa-name').value.trim();
+      var email = document.getElementById('wa-email').value.trim();
+      var phone = document.getElementById('wa-phone').value.trim();
+      var challenge = document.getElementById('wa-challenge').value;
+      var message = document.getElementById('wa-message').value.trim();
+      var waNumber = '263789356129';
+      var waMsg =
+        'Hello Spartan Traders!%0A' +
+        'Name: ' + name + '%0A' +
+        'Email: ' + email + '%0A' +
+        'Phone: ' + phone + '%0A' +
+        'Challenge: ' + challenge + '%0A' +
+        'Message: ' + message;
+      var waUrl = 'https://wa.me/' + waNumber + '?text=' + waMsg;
+      window.open(waUrl, '_blank');
+    });
+  </script>
+</body>
+</html>

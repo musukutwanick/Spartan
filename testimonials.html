@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- AOS Animate On Scroll CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials | Spartan Traders</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white">
+  <!-- Navbar -->
+  <nav class="relative z-10 flex items-center justify-between px-6 py-4 bg-black">
+    <div class="flex items-center space-x-3">
+      <img src="logo.png" alt="Spartan Logo" class="w-12 h-12 rounded-full border-2 border-yellow-400 bg-black object-cover">
+      <div class="flex flex-col leading-tight">
+        <span class="font-bold text-xl tracking-widest text-white">SPARTAN <span class="text-yellow-400">TRADERS</span></span>
+      </div>
+    </div>
+    <ul class="hidden md:flex space-x-8 text-white font-medium">
+  <li><a href="index.html" class="nav-link hover:text-yellow-400 transition">Home</a></li>
+  <li><a href="challenges.html" class="nav-link hover:text-yellow-400 transition">Challenges</a></li>
+  <li><a href="how.html" class="nav-link hover:text-yellow-400 transition">How It Works</a></li>
+  <li><a href="testimonials.html" class="nav-link nav-active hover:text-yellow-400 transition">Testimonials</a></li>
+    </ul>
+    <div class="flex items-center space-x-4">
+       <div class="flex items-center space-x-4">
+  <a href="contact.html" class="nav-link hidden md:block px-6 py-2 bg-yellow-400 text-black font-semibold rounded-full shadow hover:bg-yellow-500 transition">Contact Us</a>
+      
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </nav>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-black bg-opacity-95 transform translate-x-full transition-transform duration-300 ease-in-out z-20 md:hidden">
+    <div class="flex justify-end p-4">
+      <button id="close-menu-btn" class="text-white focus:outline-none">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+    </div>
+    <ul class="flex flex-col space-y-6 px-6 pt-8 text-white font-medium">
+  <li><a href="index.html" class="nav-link hover:text-yellow-400 transition text-lg">Home</a></li>
+  <li><a href="challenges.html" class="nav-link hover:text-yellow-400 transition text-lg">Challenges</a></li>
+  <li><a href="how.html" class="nav-link hover:text-yellow-400 transition text-lg">How It Works</a></li>
+  <li><a href="testimonials.html" class="nav-link hover:text-yellow-400 transition text-lg">Testimonials</a></li>
+      <li class="pt-4">
+        <a href="contact.html" class="hidden md:block px-6 py-2 bg-yellow-400 text-black font-semibold rounded-full shadow hover:bg-yellow-500 transition">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  <!-- ...page content goes here... -->
+  <!-- Success Stories Section -->
+  <section class="bg-gray-50 min-h-[60vh] py-16 px-4 md:px-0">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-5xl md:text-6xl font-bold mb-4 text-black" data-aos="fade-down">
+        Success <span class="text-yellow-400">Stories</span>
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-700 mb-12" data-aos="fade-up" data-aos-delay="200">
+        Hear from real Zimbabwean traders who have grown their investments with the Black Panther Robot. Their success is our success.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
+        <div data-aos="zoom-in" data-aos-delay="100">
+          <div class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">100+</div>
+          <div class="text-gray-700 text-lg">Active Traders</div>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="200">
+          <div class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">95%</div>
+          <div class="text-gray-700 text-lg">Success Rate</div>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="300">
+          <div class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">$100K+</div>
+          <div class="text-gray-700 text-lg">Profits Generated</div>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="400">
+          <div class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">3</div>
+          <div class="text-gray-700 text-lg">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+  <!-- AOS Animate On Scroll JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 900, offset: 80 });
+  </script>
