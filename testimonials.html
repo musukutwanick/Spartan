@@ -15,7 +15,7 @@
 </head>
 <body class="bg-black text-white">
   <!-- Navbar -->
-  <nav class="relative z-10 flex items-center justify-between px-6 py-4 bg-black">
+  <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 bg-black shadow-lg">
     <div class="flex items-center space-x-3">
       <img src="logo.png" alt="Spartan Logo" class="w-12 h-12 rounded-full border-2 border-yellow-400 bg-black object-cover">
       <div class="flex flex-col leading-tight">
@@ -39,7 +39,7 @@
     </div>
   </nav>
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-black bg-opacity-95 transform translate-x-full transition-transform duration-300 ease-in-out z-20 md:hidden">
+  <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-black bg-opacity-95 transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
     <div class="flex justify-end p-4">
       <button id="close-menu-btn" class="text-white focus:outline-none">
         <i class="fas fa-times text-2xl"></i>
@@ -57,7 +57,7 @@
   </div>
   <!-- ...page content goes here... -->
   <!-- Success Stories Section -->
-  <section class="bg-gray-50 min-h-[60vh] py-16 px-4 md:px-0">
+  <section class="bg-gray-50 min-h-[60vh] py-16 px-4 md:px-0 pt-32">
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-5xl md:text-6xl font-bold mb-4 text-black" data-aos="fade-down">
         Success <span class="text-yellow-400">Stories</span>
